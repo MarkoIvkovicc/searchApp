@@ -1,0 +1,48 @@
+html {
+    background-color: #bdffdb;
+}
+
+table {
+    font-size: 26px;
+}
+
+td > input {
+    width: 200px;
+    height: 40px;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 15px;
+}
+
+button {
+    width: 80px;
+    height: 25px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+h1 {
+    text-align: center;
+}
+
+#search {
+    text-align: center;
+}
+
+#searchInput, #searchSelect {
+    margin: 13px;
+    height: 35px;
+    width: 215px;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#tdSelect {
+    width: 330px;
+    padding-left: 15px;
+}
+
+#tdSelect > select {
+    height: 30px;
+    width: 140px;
+}

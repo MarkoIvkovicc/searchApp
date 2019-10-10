@@ -28,6 +28,4 @@
 //    'name' => $_POST['subFramework']
 //]);
 
-var_dump($app);
-
 header('Location: /login');

@@ -11,6 +11,7 @@ td > input {
     height: 40px;
     border-radius: 4px;
     padding: 10px;
+    padding-bottom: 2px;
     margin: 15px;
 }
 
@@ -19,6 +20,7 @@ button {
     height: 25px;
     border-radius: 4px;
     font-weight: bold;
+    margin-top: 5px;
 }
 
 h1 {
@@ -45,4 +47,70 @@ h1 {
 #tdSelect > select {
     height: 30px;
     width: 140px;
+}
+
+.error {
+    text-align: left;
+    font-size: 14.5px;
+    color: red;
+    font-family: "Bell MT";
+    text-decoration: underline;
+    margin: 0px;
+    padding: 0px;
+}
+
+#searchName {
+    float: right;
+    margin: 100px;
+    margin-right: 200px;
+    margin-bottom: 5px;
+    font-size: 1.4em;
+}
+
+#searchName > li {
+    padding: 10px;
+}
+
+#searchType {
+    float: left;
+    margin: 100px;
+    margin-left: 100px;
+    margin-bottom: 5px;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+ul, #result {
+    list-style-type: none;
+}
+
+#result {
+    margin: 0;
+    padding: 0;
+}
+
+.caret {
+    cursor: pointer;
+    user-select: none;
+}
+
+.caret::before {
+    content: "\25B6";
+    color: black;
+    display: inline-block;
+    margin-right: 6px;
+}
+
+.caret-down::before {
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Safari */'
+transform: rotate(90deg);
+}
+
+.nested {
+    display: none;
+}
+
+.active {
+    display: block;
 }

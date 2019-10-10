@@ -12,22 +12,25 @@
             <a href="/" style="padding-right: 25px;">HOME</a>
         <?php endif; ?>
     </div>
-<?php $error=''; ?>
+
     <h1>Login Page</h1>
-    <form method="post" action="/loginUser" style="text-align: center">
+    <form method="post" action="" style="text-align: center">
         <table align="center">
             <tr>
                 <td>Email:</td>
-                <td><input type="text" name="email" placeholder="Email"></td>
+                <td><input type="text" name="email" placeholder="Email">
+                <span class="error"><?= $email_err; ?></span></td>
             </tr>
             <tr>
                 <td>Password:</td>
-                <td><input type="text" name="password" placeholder="Password"></td>
+                <td><input type="text" name="password" placeholder="Password">
+                <span class="error"><?= $password_err; ?></span></td>
             </tr>
             <tr style="text-align: center" >
-                <td colspan="2"><button name="submit" type="submit">SUBMIT</button></td>
+                <td colspan="2">
+                    <button name="submit" type="submit">SUBMIT</button><br>
+                    <span class="error"><?= $empty_err; ?></span></td>
             </tr>
         </table>
-        <?= $error; ?>
     </form>
 </body>

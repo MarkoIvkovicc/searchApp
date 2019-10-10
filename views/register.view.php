@@ -8,7 +8,7 @@
         <a href="/login">LOGIN</a>
     </div>
     <h1>Registration Page</h1>
-    <form method="post" action="/createUser">
+    <form method="post" action="" style="text-align: center">
         <table align="center">
             <tr>
                 <td>Type</td>
@@ -41,26 +41,34 @@
                         <option value="Silex" id="Silex" style="display: none">Silex</option>
                         <option value="Lumen" id="Lumen" style="display: none">Lumen</option>
                     </select>
+                    <span class="error"><?= $type_err; ?></span>
+                    <span class="error"><?= $progLang_err; ?></span>
                 </td>
             </tr>
             <tr>
                 <td>Email:</td>
-                <td><input type="text" name="email" placeholder="Email"></td>
+                <td><input type="text" name="email" placeholder="Email">
+                    <span class="error"><?= $email_err; ?></span></td>
             </tr>
             <tr>
                 <td>Name:</td>
-                <td><input type="text" name="name" placeholder="Name"></td>
+                <td><input type="text" name="name" placeholder="Name">
+                    <span class="error"><?= $name_err; ?></span></td>
             </tr>
             <tr>
                 <td>Password:</td>
-                <td><input type="text" name="password" placeholder="Password"></td>
+                <td><input type="text" name="password" placeholder="Password">
+                    <span class="error"><?= $password_err; ?></span></td>
             </tr>
             <tr>
                 <td>Re-enter Password:</td>
-                <td><input type="text" name="re-password" placeholder="Re-enter Password"></td>
+                <td><input type="text" name="re-password" placeholder="Re-enter Password">
+                    <span class="error"><?= $repassword_err; ?></span>
+                    <span class="error"><?= $invalidPass; ?></span></td>
             </tr>
             <tr style="text-align: center">
-                <td colspan="2"><button type="submit">SUBMIT</button></td>
+                <td colspan="2"><span class="error"><?= $empty_err; ?></span><br>
+                    <button name="submit" type="submit">SUBMIT</button></td>
             </tr>
         </table>
     </form>

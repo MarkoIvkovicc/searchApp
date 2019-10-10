@@ -14,8 +14,6 @@
 
     <h1 style="font-size: 2.6em;">Result Page</h1>
 
-
-
     <div id="searchName">
         <table class="tableResult">
             <tr>

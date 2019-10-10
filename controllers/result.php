@@ -38,7 +38,6 @@ if (isset($_SESSION['loginUser']) == true){
                         case 'Lumen' : $lumen +=1; break;
                     }
                 }
-
             }
         }
     } else {

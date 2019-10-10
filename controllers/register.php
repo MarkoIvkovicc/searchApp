@@ -37,35 +37,33 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $empty_err = "<p>*Please Fill All Required Fields</p>";
         } if ($email_err == '' && $name_err == '' && $password_err == '' && $repassword_err == '' &&
             $invalidPass == '' && $type_err == '' && $progLang_err == '' && $empty_err == '') {
-                $app['database']->newUser('users',[
-                    'email' => $_POST['email'],
-                    'name' => $_POST['name'],
-                    'password' => $_POST['password'],
-                    'developerId' => null,
-                    'progLangId' => null,
-                    'frameworkId' => null,
-                    'subFrameworkId' => null
-                ]);
+            $app['database']->newUser('users',[
+                'email' => $_POST['email'],
+                'name' => $_POST['name'],
+                'password' => $_POST['password'],
+                'developerId' => null,
+                'progLangId' => null,
+                'frameworkId' => null,
+                'subFrameworkId' => null
+            ]);
 
+            $app['database']->newUser('developertype', [
+                'name' => $_POST['type']
+            ]);
 
+            $app['database']->newUser('programminglanguage', [
+                'name' => $_POST['progLang']
+            ]);
 
-                $app['database']->newUser('developertype', [
-                    'name' => $_POST['type']
-                ]);
+            $app['database']->newUser('framework', [
+                'name' => $_POST['framework']
+            ]);
 
-                $app['database']->newUser('programminglanguage', [
-                    'name' => $_POST['progLang']
-                ]);
+            $app['database']->newUser('subframework', [
+                'name' => $_POST['subFramework']
+            ]);
 
-                $app['database']->newUser('framework', [
-                    'name' => $_POST['framework']
-                ]);
-
-                $app['database']->newUser('subframework', [
-                    'name' => $_POST['subFramework']
-                ]);
-
-                header('Location: /login');
+            header('Location: /login');
         }
     }
 }

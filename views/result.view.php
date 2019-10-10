@@ -14,10 +14,22 @@
 
     <h1 style="font-size: 2.6em;">Result Page</h1>
 
+
+
     <div id="searchName">
-        <?php foreach ($row as $date) : ?>
-            <li><?= $date->name; ?></li>
-        <?php endforeach; ?>
+        <table class="tableResult">
+            <tr>
+                <th class="a">Name</th>
+                <th class="a">Email</th>
+            </tr>
+            <?php foreach ($row as $date) : ?>
+                <tr>
+                    <td><?= $date->name; ?></td>
+                    <td><?= $date->email; ?></td>
+                </tr>
+            <?php endforeach; ?>
+
+        </table>
     </div>
 
     <div id="searchType">

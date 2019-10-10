@@ -18,12 +18,12 @@
         <table align="center">
             <tr>
                 <td>Email:</td>
-                <td><input type="text" name="email" placeholder="Email">
+                <td><input type="text" name="email" placeholder="Email" required>
                 <span class="error"><?= $email_err; ?></span></td>
             </tr>
             <tr>
                 <td>Password:</td>
-                <td><input type="text" name="password" placeholder="Password">
+                <td><input type="text" name="password" placeholder="Password" required>
                 <span class="error"><?= $password_err; ?></span></td>
             </tr>
             <tr style="text-align: center" >

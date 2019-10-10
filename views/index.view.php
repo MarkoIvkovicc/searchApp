@@ -21,10 +21,10 @@
     <div id="search">
         <label for="info"></label>
         <form method="post" action="/result">
-            <input type="text" name="search" placeholder="Type Name Or Email" id="searchInput">
+            <input type="text" name="search" placeholder="Type Name Or Email" id="searchInput" required>
             <span class="error" style="text-align: center; padding: 0px; margin: 0px;">
                 <?= $search_err; ?> <?= $empty_err; ?></span><br>
-            <select name="type" id="searchSelect">
+            <select name="type" id="searchSelect" required>
                 <option value="" selected disabled>Please Select Type</option>
                 <option value="FrontEnd">Front End Developer</option>
                 <option value="BackEnd">Back End Developer</option>

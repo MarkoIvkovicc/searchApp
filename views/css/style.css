@@ -73,7 +73,7 @@ h1 {
 
 #searchType {
     float: left;
-    margin: 100px;
+    margin: 150px;
     margin-left: 100px;
     margin-bottom: 5px;
     font-size: 1.6em;
@@ -87,6 +87,21 @@ ul, #result {
 #result {
     margin: 0;
     padding: 0;
+}
+
+.tableResult{
+    font-family: monospace;
+    border-collapse: collapse;
+}
+
+.tableResult td, .tableResult th {
+    border: 1.5px solid black;
+    text-align: left;
+    padding: 8px;
+}
+
+.tableResult tr:nth-child(even) {
+    background-color: lightcyan;
 }
 
 .caret {

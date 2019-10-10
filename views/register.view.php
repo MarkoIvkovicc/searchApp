@@ -13,12 +13,12 @@
             <tr>
                 <td>Type</td>
                 <td id="tdSelect">
-                    <select name="type" id="type" onchange="showProgLang(this)">
+                    <select name="type" id="type" onchange="showProgLang(this)" required>
                         <option value="" disabled selected>Please Select</option>
                         <option value="FrontEnd">Front End Developer</option>
                         <option value="BackEnd">Back End Developer</option>
-                    </select>
-                    <select name="progLang" id="progLang" style="display: none" onchange="showFramework(this)">
+                    </select >
+                    <select name="progLang" id="progLang" style="display: none" onchange="showFramework(this)" required>
                         <option value="" disabled selected id="default">Please Select</option>
                         <option value="Angular" id="Angular" style="display: none">Angular</option>
                         <option value="React" id="React" style="display: none">React</option>
@@ -47,22 +47,22 @@
             </tr>
             <tr>
                 <td>Email:</td>
-                <td><input type="text" name="email" placeholder="Email">
+                <td><input type="text" name="email" placeholder="Email" required>
                     <span class="error"><?= $email_err; ?></span></td>
             </tr>
             <tr>
                 <td>Name:</td>
-                <td><input type="text" name="name" placeholder="Name">
+                <td><input type="text" name="name" placeholder="Name" required>
                     <span class="error"><?= $name_err; ?></span></td>
             </tr>
             <tr>
                 <td>Password:</td>
-                <td><input type="text" name="password" placeholder="Password">
+                <td><input type="text" name="password" placeholder="Password" required>
                     <span class="error"><?= $password_err; ?></span></td>
             </tr>
             <tr>
                 <td>Re-enter Password:</td>
-                <td><input type="text" name="re-password" placeholder="Re-enter Password">
+                <td><input type="text" name="re-password" placeholder="Re-enter Password" required>
                     <span class="error"><?= $repassword_err; ?></span>
                     <span class="error"><?= $invalidPass; ?></span></td>
             </tr>
